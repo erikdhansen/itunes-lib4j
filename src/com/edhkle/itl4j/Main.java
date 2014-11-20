@@ -21,7 +21,7 @@ public class Main {
         String filename = args[0];
         File xmlInventoryFile = new File(filename);
         try {
-            ItunesLibrary library = new ItunesXMLLibraryParser().parse(xmlInventoryFile);
+            ItunesLibrary library = ItunesXMLLibraryParser.parse(xmlInventoryFile);
             System.out.println("Completed importing iTunes Library.  Track Count: " + library.getTracks().size());
         } catch (Exception e) {
             e.printStackTrace();

@@ -41,48 +41,32 @@ public class ItunesTrack {
     public ItunesTrack(NSObject object) {
         try {
         Map<String,NSObject> oMap = ((NSDictionary)object);
-        trackId = getAsInt(oMap.get("Track ID"));
-        name = getAsString(oMap.get("Name"));
-        artist = getAsString(oMap.get("Artist"));
-        album = getAsString(oMap.get("Album"));
-        genre = getAsString(oMap.get("Genre"));
-        kind = getAsString(oMap.get("Kind"));
-        size = getAsInt(oMap.get("Size"));
-        totalTime = getAsInt(oMap.get("Total Time"));
-        trackNumber = getAsInt(oMap.get("Track Number")) == null ? 0 : getAsInt(oMap.get("Track Number"));
-        year = getAsInt(oMap.get("Year")) == null ? 0 : getAsInt(oMap.get("Year"));
-        modifiedDate = getAsDate(oMap.get("Date Modified"));
-        addedDate = getAsDate(oMap.get("Date Added"));
-        bitRate = getAsInt(oMap.get("Bit Rate"));
-        sampleRate = getAsInt(oMap.get("Sample Rate")) == null ? 0 : getAsInt(oMap.get("Sample Rate"));
-        persistentId = getAsString(oMap.get("Persistent ID"));
-        trackType = getAsString(oMap.get("Track Type"));
-        location = getAsString(oMap.get("Location"));
-        fileFolderCount = getAsInt(oMap.get("File Folder Count")) == null ? 0 : getAsInt(oMap.get("File Folder Count"));
-        libraryFolderCount = getAsInt(oMap.get("Library Folder Count")) == null ? 0 : getAsInt(oMap.get("Library Folder Count"));
+        trackId = ItunesXMLLibraryParser.getAsInt(oMap.get("Track ID"));
+        name = ItunesXMLLibraryParser.getAsString(oMap.get("Name"));
+        artist = ItunesXMLLibraryParser.getAsString(oMap.get("Artist"));
+        album = ItunesXMLLibraryParser.getAsString(oMap.get("Album"));
+        genre = ItunesXMLLibraryParser.getAsString(oMap.get("Genre"));
+        kind = ItunesXMLLibraryParser.getAsString(oMap.get("Kind"));
+        size = ItunesXMLLibraryParser.getAsInt(oMap.get("Size"));
+        totalTime = ItunesXMLLibraryParser.getAsInt(oMap.get("Total Time"));
+        trackNumber = ItunesXMLLibraryParser.getAsInt(oMap.get("Track Number"));
+        year = ItunesXMLLibraryParser.getAsInt(oMap.get("Year"));
+        modifiedDate = ItunesXMLLibraryParser.getAsDate(oMap.get("Date Modified"));
+        addedDate = ItunesXMLLibraryParser.getAsDate(oMap.get("Date Added"));
+        bitRate = ItunesXMLLibraryParser.getAsInt(oMap.get("Bit Rate"));
+        sampleRate = ItunesXMLLibraryParser.getAsInt(oMap.get("Sample Rate"));
+        persistentId = ItunesXMLLibraryParser.getAsString(oMap.get("Persistent ID"));
+        trackType = ItunesXMLLibraryParser.getAsString(oMap.get("Track Type"));
+        location = ItunesXMLLibraryParser.getAsString(oMap.get("Location"));
+        fileFolderCount = ItunesXMLLibraryParser.getAsInt(oMap.get("File Folder Count"));
+        libraryFolderCount = ItunesXMLLibraryParser.getAsInt(oMap.get("Library Folder Count"));
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(object.toXMLPropertyList());
         }
     }
 
-    public static String getAsString(NSObject object) {
-        if(object == null)
-            return "";
-        return ((NSString)object).getContent();
-    }
-    
-    public static Integer getAsInt(NSObject object) {
-        if(object == null)
-            return null;
-        return ((NSNumber)object).intValue();
-    }
-    
-    public static Date getAsDate(NSObject object) {
-        if(object == null)
-            return null;
-        return ((NSDate)object).getDate();
-    }
+
     
     public int getTrackId() {
         return trackId;

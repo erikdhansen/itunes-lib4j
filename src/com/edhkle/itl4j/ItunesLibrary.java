@@ -10,6 +10,8 @@ import com.dd.plist.NSDictionary;
 import com.dd.plist.NSNumber;
 import com.dd.plist.NSObject;
 import com.dd.plist.NSString;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -24,6 +26,7 @@ public class ItunesLibrary {
     
     NSDictionary          dict;
     ItunesTracks          tracks;
+    List<ItunesPlaylist>  playlists = new LinkedList<>();
     
     public ItunesLibrary(NSDictionary dict) throws ItunesXMLLibraryParserException {
         this.dict = dict;
@@ -59,5 +62,13 @@ public class ItunesLibrary {
         this.tracks = tracks;
     }
     
+    public void addItunesPlaylist(ItunesPlaylist playlist) {
+        playlist.setItunesLibrary(this);
+        playlists.add(playlist);
+    }
     
+    public void removeItunesPlaylist(ItunesPlaylist playlist) {
+        playlists.remove(playlist);
+        playlist.setItunesLibrary(null);
+    }
 }

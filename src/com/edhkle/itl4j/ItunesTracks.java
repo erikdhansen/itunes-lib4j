@@ -20,7 +20,6 @@ public class ItunesTracks extends HashMap<Integer, ItunesTrack> {
     public ItunesTracks(Map<String,NSObject> nsObjMap) {
         for(Map.Entry<String,NSObject> entry : nsObjMap.entrySet()) {
             this.put(Integer.parseInt(entry.getKey()), new ItunesTrack(entry.getValue()));
-            log.info("Added new track[" + entry.getKey() + "]");
         }
     }
 }
