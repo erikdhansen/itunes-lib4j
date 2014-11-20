@@ -1,0 +1,56 @@
+ehansen@qiana:~/src/nb/itunes-lib4j [10.10.10.249]$ java -jar dist/itunes-lib4j.jar ./resources/sampledata/itunesLibrary.xml 
+Nov 18, 2014 4:15:38 PM com.edhkle.itl4j.ItunesXMLLibraryParser parse
+WARNING: Found nothing for key: Name -- found
+{
+	"Major Version" = 1;
+	"Minor Version" = 1;
+	"Date" = "2014-11-15T08:44:13Z";
+	"Application Version" = "12.0.1.26";
+	"Features" = 5;
+	"Show Content Ratings" = YES;
+	"Music Folder" = "file:///Users/ehansen/Music/iTunes/iTunes%20Media/";
+	"Library Persistent ID" = "D63F94011EB8D770";
+	"Tracks" =
+		{
+			"9173" =
+				{
+					"Track ID" = 9173;
+					"Name" = "Harry Hood >";
+					"Artist" = "Phish";
+					"Album" = "1995-12-30 - Madison Square Garden - New York, NY";
+					"Genre" = "Rock";
+					"Kind" = "MPEG audio file";
+					"Size" = 26603126;
+					"Total Time" = 935157;
+					"Track Number" = 15;
+					"Year" = 1995;
+					"Date Modified" = "2011-12-25T02:53:37Z";
+					"Date Added" = "2014-09-13T00:46:43Z";
+					"Bit Rate" = 227;
+					"Sample Rate" = 44100;
+					"Persistent ID" = "27F204FEAF781251";
+					"Track Type" = "File";
+					"Location" = "file:///Users/ehansen/Music/iTunes/iTunes%20Media/Music/Phish/1995-12-30%20-%20Madison%20Square%20Garden%20-%20New%20York,%20NY/15%20Harry%20Hood%20_%201.mp3";
+					"File Folder Count" = 5;
+					"Library Folder Count" = 1;
+				};
+			"9175" =
+				{
+					"Track ID" = 9175;
+					"Name" = "Fifty Shades of Grey (Part 1)";
+					"Album" = "Fifty Shades of Grey";
+					"Kind" = "AAC audio file";
+					"Size" = 285973419;
+					"Total Time" = 21116039;
+					"Date Modified" = "2013-11-16T15:18:38Z";
+					"Date Added" = "2014-09-13T00:46:43Z";
+					"Bit Rate" = 106;
+					"Sample Rate" = 44100;
+					"Artwork Count" = 1;
+					"Persistent ID" = "49C33A80291A8723";
+					"Track Type" = "File";
+					"Location" = "file:///Users/ehansen/Music/iTunes/iTunes%20Media/Audiobooks/Fifty%20Shades%20of%20Grey%20(Part%201).m4b";
+					"File Folder Count" = 3;
+					"Library Folder Count" = 1;
+				};
+
